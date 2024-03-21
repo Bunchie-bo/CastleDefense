@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfcd1lhon84wn"]
+
+[ext_resource type="Script" path="res://assets/enemies/bad_guy/bad_guy.gd" id="1_cih3p"]
+[ext_resource type="Texture2D" uid="uid://b1mb4q8bjx8oa" path="res://icon.svg" id="2_xuuae"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw5l3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpand"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xuuae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bad_guy" type="CharacterBody2D"]
+script = ExtResource("1_cih3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yw5l3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xpand")
