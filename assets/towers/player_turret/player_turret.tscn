@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ce5o12jihmh"]
+
+[ext_resource type="Script" path="res://assets/towers/player_turret/player_turret.gd" id="1_3frf7"]
+[ext_resource type="Texture2D" uid="uid://b1mb4q8bjx8oa" path="res://icon.svg" id="2_llb2q"]
+
+[node name="player_turret" type="Node2D"]
+script = ExtResource("1_3frf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, -1.00001)
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("2_llb2q")
+
+[node name="gun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="gun"]
+position = Vector2(28, 1)
+scale = Vector2(0.625, 0.125)
+texture = ExtResource("2_llb2q")

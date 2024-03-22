@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkihw7o4qkmdf"]
+[gd_scene load_steps=7 format=3 uid="uid://bkihw7o4qkmdf"]
 
 [ext_resource type="Script" path="res://assets/castle/castlebody.gd" id="1_50kcv"]
 [ext_resource type="Texture2D" uid="uid://b1mb4q8bjx8oa" path="res://icon.svg" id="1_hyttq"]
 [ext_resource type="PackedScene" uid="uid://dfcd1lhon84wn" path="res://assets/enemies/bad_guy/bad_guy.tscn" id="2_7rq7l"]
+[ext_resource type="PackedScene" uid="uid://b6ce5o12jihmh" path="res://assets/towers/player_turret/player_turret.tscn" id="4_pwkuy"]
 
 [sub_resource type="Theme" id="Theme_o74qt"]
 
@@ -57,3 +58,6 @@ shape = SubResource("RectangleShape2D_iulpb")
 
 [node name="bad_guy" parent="." instance=ExtResource("2_7rq7l")]
 position = Vector2(1020, 272)
+
+[node name="player_turret" parent="." instance=ExtResource("4_pwkuy")]
+position = Vector2(310, 293)
